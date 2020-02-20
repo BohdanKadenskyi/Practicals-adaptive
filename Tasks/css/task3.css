@@ -1,0 +1,85 @@
+:root {
+  --yellow-color: yellow;
+  --green-color: yellowgreen;
+  --red-color: red;
+  --blue-color: blue;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+body {
+  all: unset;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .red {
+    background-color: var(--red-color);
+    height: 40%;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 10px;
+  }
+
+  .wrapper {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .green {
+    background-color: var(--green-color);
+    height: 40%;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 10px;
+  }
+
+  .blue {
+    background-color: var(--blue-color);
+    height: 20%;
+    width: 50%;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .red {
+    background-color: var(--red-color);
+    height: 40%;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 10px;
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    flex-basis: 50%;
+    height: 100vh;
+    margin-bottom: 10px;
+  }
+
+  .green {
+    background-color: var(--green-color);
+    /* 10*1=10
+    10/1=10 */
+    flex-basis: calc(15% - 10px);
+    margin-right: 10px;
+  }
+
+  .blue {
+    background-color: var(--blue-color);
+    flex-basis: 35%;
+  }
+}
